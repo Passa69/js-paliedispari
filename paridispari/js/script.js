@@ -4,3 +4,22 @@
 // 4. sommiamo i 2 numeri
 // 5. somma pari o dispari? (funz)
 // 6. stampiamo il vincitore
+
+const userChoose = prompt("Uscirà pari o dispari?");
+console.log(userChoose);
+
+const userNum = parseInt(prompt("Inserisci qui il tuo numero da 1 a 5: "));
+console.log(userNum);
+
+let pcNum = Random();
+
+function Random(pcRand) { 
+
+    pcRand = Math.floor(Math.random() * 5) + 1
+
+    return pcRand;
+}
+console.log(pcNum);
+
+let somma = pcNum + userNum;
+console.log(somma);
