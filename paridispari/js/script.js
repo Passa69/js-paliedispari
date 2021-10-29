@@ -11,26 +11,31 @@ console.log(userChoose);
 const userNum = parseInt(prompt("Inserisci qui il tuo numero da 1 a 5: "));
 console.log(userNum);
 
+
 let pcNum = Random();
-
-function Random(pcRand) { 
-
-    pcRand = Math.floor(Math.random() * 5) + 1
-
-    return pcRand;
-}
 console.log(pcNum);
 
-let finish = paridispari();
+let somma = pcNum + userNum;
+console.log(somma);
+
+if (paridispari(somma) == userChoose) {
+    console.log('hai vinto');
+} else {
+    console.log('hai perso');
+}
+
+
+// funzioni
+function Random() { 
+
+    return Math.floor(Math.random() * 5) + 1;
+}
 
 function paridispari(risultato) {
 
-    let somma = pcNum + userNum;
-    console.log(somma);
-
-    if (somma % 2 === 0) {
-        risultato = console.log("Hai vinto");
-    } else {
-        risultato = console.log("Hai perso");
+    if (risultato % 2 === 0) {
+        return "pari";
     }
+    
+    return "dispari";
 }
