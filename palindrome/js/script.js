@@ -12,3 +12,22 @@
     // 3.2 se la parola inserita dall'utente cambia allora non è palindroma
 
 
+const userWord = prompt("Inserire una parola: ");
+console.log(userWord);
+
+let wordInv = invertiParola(userWord);
+
+function invertiParola(str) {
+
+    let strInversa = str.split('').reverse().join('');
+
+    return strInversa;
+}
+
+if(userWord == wordInv) {
+    // console.log('la parola è palindroma');
+    document.getElementById("container").innerHTML = (`la parola ${userWord} è palindroma`);
+    } else {
+    // console.log('la parola non è palindroma');
+    document.getElementById("container").innerHTML = (`la parola ${userWord} non è palindroma`);
+    }
