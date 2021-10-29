@@ -21,5 +21,16 @@ function Random(pcRand) {
 }
 console.log(pcNum);
 
-let somma = pcNum + userNum;
-console.log(somma);
+let finish = paridispari();
+
+function paridispari(risultato) {
+
+    let somma = pcNum + userNum;
+    console.log(somma);
+
+    if (somma % 2 === 0) {
+        risultato = console.log("Hai vinto");
+    } else {
+        risultato = console.log("Hai perso");
+    }
+}
